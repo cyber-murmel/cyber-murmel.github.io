@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Potentiometer Offset Calculator</h2>
+
+<form>
+<p>
+    <label for="Upos">U<sub>+</sub></label>
+    <input id="Upos" value="12.0">
+</p>
+<p>
+    <label for="Uneg">U<sub>-</sub></label>
+    <input id="Uneg" value="-12.0">
+</p>
+
+<p>
+    <label for="Umax">U<sub>max</sub></label>
+    <input id="Umax" value="4.0">
+</p>
+<p>
+    <label for="Umin">U<sub>min</sub></label>
+    <input id="Umin" value="1.0">
+</p>
+<p>
+    <label for="Rvar">R<sub>var</sub></label>
+    <input id="Rvar" value="100000">
+</p>
+<p>
+    <label for="R1">R<sub>1</sub></label>
+    <output id="R1" for="Usup Umax Umin Rvar">
+</p>
+<p>
+    <label for="R2">R<sub>2</sub></label>
+    <output id="R2" for="Usup Umax Umin Rvar">
+</p>
+</form>
+<button type="button" onclick="myFunction()">Calculate</button>
+
+<script>
+function myFunction() {
+  let Upos = document.getElementById("Upos").value;
+  let Uneg = document.getElementById("Uneg").value;
+  let Umax = document.getElementById("Umax").value;
+  let Umin = document.getElementById("Umin").value;
+  let Rvar = document.getElementById("Rvar").value;
+  
+  document.getElementById("R1").value = Rvar/(Umax-Umin)*(Upos-Umax);
+  document.getElementById("R2").value = Rvar/(Umax-Umin)*(Umin-Uneg);
+}
+</script>
+
+</body>
+</html> 
+
