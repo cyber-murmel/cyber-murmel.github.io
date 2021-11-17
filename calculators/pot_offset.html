@@ -27,58 +27,65 @@ function calculate() {
 
 <div class="container">
   <h2>Potentiometer Offset Calculator</h2>
-  <p>Calculate the values for the offset resistors</p> 
-  <form>
-             
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Variable</th>
-        <th>Value</th>
-        <th>Unit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><label for="Upos">U<sub>+</sub></label></td>
-        <td><input id="Upos" value="12.0"></td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td><label for="Uneg">U<sub>-</sub></label></td>
-        <td><input id="Uneg" value="-12.0"></td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td><label for="Umax">U<sub>max</sub></label></td>
-        <td><input id="Umax" value="5.0"></td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td><label for="Umin">U<sub>min</sub></label></td>
-        <td><input id="Umin" value="-5.0"></td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td><label for="Rvar">R<sub>var</sub></label></td>
-        <td><input id="Rvar" value="10"></td>
-        <td>k&Omega;</td>
-      </tr>
-      <tr>
-        <td><label for="R1">R<sub>1</sub></label></td>
-        <td><output id="R1"></td>
-        <td>k&Omega;</td>
-      </tr>
-      <tr>
-        <td><label for="R2">R<sub>2</sub></label></td>
-        <td><output id="R2"></td>
-        <td>k&Omega;</td>
-      </tr>
-    </tbody>
-  </table>
-</form>
+  <p>Calculate the values for the offset resistors</p>
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="../img/pot_offset.svg" height=100%>
+    </div>
+    <div class="col-sm-8">
+    <form>
+    
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label for="Upos">U<sub>+</sub></label></td>
+            <td><input id="Upos" value="12.0"></td>
+            <td>V</td>
+          </tr>
+          <tr>
+            <td><label for="R1">R<sub>1</sub></label></td>
+            <td><output id="R1"></td>
+            <td>k&Omega;</td>
+          </tr>
+          <tr>
+            <td><label for="Umax">U<sub>max</sub></label></td>
+            <td><input id="Umax" value="5.0"></td>
+            <td>V</td>
+          </tr>
+          <tr>
+            <td><label for="Rvar">R<sub>var</sub></label></td>
+            <td><input id="Rvar" value="10"></td>
+            <td>k&Omega;</td>
+          </tr>
+          <tr>
+            <td><label for="Umin">U<sub>min</sub></label></td>
+            <td><input id="Umin" value="-5.0"></td>
+            <td>V</td>
+          </tr>
+          <tr>
+            <td><label for="R2">R<sub>2</sub></label></td>
+            <td><output id="R2"></td>
+            <td>k&Omega;</td>
+          </tr>
+          <tr>
+            <td><label for="Uneg">U<sub>-</sub></label></td>
+            <td><input id="Uneg" value="-12.0"></td>
+            <td>V</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
 
-<button type="button" onclick="calculate()">Calculate</button>
+  </div>
+  <button type="button" onclick="calculate()">Calculate</button>
 
 </div>
 
